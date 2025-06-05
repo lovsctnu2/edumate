@@ -17,9 +17,9 @@
                         poppins: ['Poppins', 'sans-serif'],
                     },
                     colors: {
-                        // Define custom colors for consistency
+                        'edumate-base': '#B3B3B3',
                         'edumate-black': '#1A1A1A',
-                        'edumate-white': '#F2F2F2',
+                        'edumate-white': '#FFFFFF',
                         'edumate-gray': '#D4D4D4',
                     },
                 },
@@ -47,7 +47,7 @@
     <div class="min-h-screen flex flex-col">
 
         <div
-            class="navbar bg-edumate-black w-full h-[180px] rounded-bl-3xl rounded-br-3xl px-4 md:px-10 pb-10 pt-[88px] text-xl flex justify-between items-center lg:h-[120px] lg:pt-5 lg:px-20">
+            class="navbar bg-edumate-base w-full h-[180px] rounded-bl-3xl rounded-br-3xl px-4 md:px-10 pb-10 pt-[88px] text-xl flex justify-between items-center lg:h-[120px] lg:pt-5 lg:px-20">
             <img src="image/logo.png" alt="EduMate Logo" class="w-[92px] h-[51px] lg:w-[120px] lg:h-[66px]" />
             <div class="profil flex items-center">
                 <div class="user text-edumate-white mr-2 text-xl font-bold leading-none lg:text-right lg:mr-4">
@@ -62,10 +62,10 @@
         <main class="flex-grow mx-auto max-w-[430px] lg:max-w-screen-xl w-full px-4 lg:px-0 pb-16">
             <div class="searchbar py-4 flex items-center lg:px-10 lg:py-8">
                 <input type="text"
-                    class="search w-full max-w-[289px] h-[40px] rounded-full bg-edumate-black px-4 py-2 mr-2 border-none font-bold text-edumate-white placeholder:text-edumate-white/70 focus:outline-none focus:ring-2 focus:ring-blue-500 lg:max-w-[calc(100%-120px)] lg:h-[50px] lg:text-lg"
+                    class="search w-full max-w-[289px] h-[40px] rounded-full bg-edumate-base px-4 py-2 mr-2 border-none font-bold text-edumate-white placeholder:text-edumate-white/70 focus:outline-none focus:ring-2 focus:ring-blue-500 lg:max-w-[calc(100%-120px)] lg:h-[50px] lg:text-lg"
                     placeholder="Cari mentor / murid">
                 <img src="image/search.png"
-                    class="search-icon w-[37px] h-[37px] bg-edumate-black rounded-full p-2 cursor-pointer lg:w-[45px] lg:h-[45px] lg:p-2 hover:scale-110 transition-transform duration-200"
+                    class="search-icon w-[37px] h-[37px] bg-edumate-base rounded-full p-2 cursor-pointer lg:w-[45px] lg:h-[45px] lg:p-2 hover:scale-110 transition-transform duration-200"
                     alt="Search Icon">
                 <img src="image/notif.png"
                     class="w-[48px] h-[48px] rounded-full p-2 ml-auto cursor-pointer lg:w-[55px] lg:h-[55px] lg:p-2 hover:scale-110 transition-transform duration-200"
@@ -77,23 +77,23 @@
             <div
                 class="button-group flex flex-col md:flex-row justify-around p-4 space-y-4 md:space-y-0 md:space-x-4 lg:justify-center lg:space-x-12 lg:py-8">
                 <a href="/edumate/mentor-form"
-                    class="bg-edumate-black rounded-full px-8 py-3 flex items-center justify-center text-center w-full md:w-auto lg:px-12 lg:py-4 lg:text-xl shadow-md hover:bg-edumate-gray hover:text-edumate-black transition-colors duration-200">
+                    class="bg-edumate-base rounded-full px-8 py-3 flex items-center justify-center text-center w-full md:w-auto lg:px-12 lg:py-4 lg:text-xl shadow-md hover:bg-edumate-gray hover:text-edumate-black transition-colors duration-200">
                     <img src="image/mentor2.png" alt="Mentor Icon" class="w-8 h-8 mr-2 lg:w-10 lg:h-10 lg:mr-3">
                     <span class="text-sm font-bold text-edumate-white lg:text-lg">Request <br> Mentor Baru</span>
                 </a>
                 <a href="/edumate/murid-form"
-                    class="bg-edumate-black rounded-full px-8 py-3 flex items-center justify-center text-center w-full md:w-auto lg:px-12 lg:py-4 lg:text-xl shadow-md hover:bg-edumate-gray hover:text-edumate-black transition-colors duration-200">
+                    class="bg-edumate-base rounded-full px-8 py-3 flex items-center justify-center text-center w-full md:w-auto lg:px-12 lg:py-4 lg:text-xl shadow-md hover:bg-edumate-gray hover:text-edumate-black transition-colors duration-200">
                     <img src="image/murid.png" alt="Murid Icon" class="w-8 h-8 mr-2 lg:w-10 lg:h-10 lg:mr-3">
                     <span class="text-sm font-bold text-edumate-white lg:text-lg">Temukan <br> Murid Baru</span>
                 </a>
             </div>
 
             <div class="px-6 mt-2 lg:px-10 lg:mt-8">
-                <h2 class="text-lg font-bold text-edumate-black mb-2 lg:text-xl lg:mb-4">Mentor untuk kamu</h2>
+                <h2 class="text-lg font-bold text-edumate-base mb-2 lg:text-xl lg:mb-4">Mentor untuk kamu</h2>
                 <div
                     class="mentor-list flex gap-8 pl-5 overflow-x-auto pb-4 scrollbar-hide lg:pl-0 lg:grid lg:grid-cols-4 lg:gap-6">
                     <div
-                        class="mentor-card flex-shrink-0 w-[150px] h-[160px] bg-edumate-black rounded-2xl p-4 flex flex-col justify-between shadow-md lg:w-auto lg:h-auto lg:aspect-square hover:scale-105 transition-transform duration-200 cursor-pointer">
+                        class="mentor-card flex-shrink-0 w-[150px] h-[160px] bg-edumate-base rounded-2xl p-4 flex flex-col justify-between shadow-md lg:w-auto lg:h-auto lg:aspect-square hover:scale-105 transition-transform duration-200 cursor-pointer">
                         <div>
                             <img src="image/profile.png" alt="Rayhan Noor's profile picture"
                                 class="w-16 h-16 rounded-full mx-auto lg:w-20 lg:h-20">
@@ -114,7 +114,7 @@
                     </div>
 
                     <div
-                        class="mentor-card flex-shrink-0 w-[150px] h-[160px] bg-edumate-black rounded-2xl p-4 flex flex-col justify-between shadow-md lg:w-auto lg:h-auto lg:aspect-square hover:scale-105 transition-transform duration-200 cursor-pointer">
+                        class="mentor-card flex-shrink-0 w-[150px] h-[160px] bg-edumate-base rounded-2xl p-4 flex flex-col justify-between shadow-md lg:w-auto lg:h-auto lg:aspect-square hover:scale-105 transition-transform duration-200 cursor-pointer">
                         <div>
                             <img src="image/profile.png" alt="Tristan Juliano's profile picture"
                                 class="w-16 h-16 rounded-full mx-auto lg:w-20 lg:h-20">
@@ -134,7 +134,7 @@
                         </div>
                     </div>
                     <div
-                        class="mentor-card flex-shrink-0 w-[150px] h-[160px] bg-edumate-black rounded-2xl p-4 flex flex-col justify-between shadow-md lg:w-auto lg:h-auto lg:aspect-square hover:scale-105 transition-transform duration-200 cursor-pointer">
+                        class="mentor-card flex-shrink-0 w-[150px] h-[160px] bg-edumate-base rounded-2xl p-4 flex flex-col justify-between shadow-md lg:w-auto lg:h-auto lg:aspect-square hover:scale-105 transition-transform duration-200 cursor-pointer">
                         <div>
                             <img src="image/profile.png" alt="Budi Santoso's profile picture"
                                 class="w-16 h-16 rounded-full mx-auto lg:w-20 lg:h-20">
@@ -154,7 +154,7 @@
                         </div>
                     </div>
                     <div
-                        class="mentor-card flex-shrink-0 w-[150px] h-[160px] bg-edumate-black rounded-2xl p-4 flex flex-col justify-between shadow-md lg:w-auto lg:h-auto lg:aspect-square hover:scale-105 transition-transform duration-200 cursor-pointer">
+                        class="mentor-card flex-shrink-0 w-[150px] h-[160px] bg-edumate-base rounded-2xl p-4 flex flex-col justify-between shadow-md lg:w-auto lg:h-auto lg:aspect-square hover:scale-105 transition-transform duration-200 cursor-pointer">
                         <div>
                             <img src="image/profile.png" alt="Citra Dewi's profile picture"
                                 class="w-16 h-16 rounded-full mx-auto lg:w-20 lg:h-20">
@@ -177,11 +177,11 @@
             </div>
 
             <div class="p-6 mt-2 mb-3 lg:px-10 lg:mt-8">
-                <h2 class="text-lg font-bold text-edumate-black mb-2 lg:text-xl lg:mb-4">Murid untuk kamu</h2>
+                <h2 class="text-lg font-bold text-edumate-base mb-2 lg:text-xl lg:mb-4">Murid untuk kamu</h2>
                 <div
                     class="student-list flex gap-8 pl-5 overflow-x-auto pb-4 scrollbar-hide lg:pl-0 lg:grid lg:grid-cols-4 lg:gap-6">
                     <div
-                        class="student-card flex-shrink-0 w-[150px] h-[160px] bg-edumate-black rounded-2xl p-4 flex flex-col justify-center items-center shadow-md lg:w-auto lg:h-auto lg:aspect-square hover:scale-105 transition-transform duration-200 cursor-pointer">
+                        class="student-card flex-shrink-0 w-[150px] h-[160px] bg-edumate-base rounded-2xl p-4 flex flex-col justify-center items-center shadow-md lg:w-auto lg:h-auto lg:aspect-square hover:scale-105 transition-transform duration-200 cursor-pointer">
                         <img src="image/profile.png" alt="Daniel Baskara's profile picture"
                             class="w-16 h-16 rounded-full mx-auto lg:w-20 lg:h-20">
                         <h3 class="text-sm font-bold text-center text-edumate-white mt-2 lg:text-base">Daniel Baskara
@@ -193,7 +193,7 @@
                     </div>
 
                     <div
-                        class="student-card flex-shrink-0 w-[150px] h-[160px] bg-edumate-black rounded-2xl p-4 flex flex-col justify-center items-center shadow-md lg:w-auto lg:h-auto lg:aspect-square hover:scale-105 transition-transform duration-200 cursor-pointer">
+                        class="student-card flex-shrink-0 w-[150px] h-[160px] bg-edumate-base rounded-2xl p-4 flex flex-col justify-center items-center shadow-md lg:w-auto lg:h-auto lg:aspect-square hover:scale-105 transition-transform duration-200 cursor-pointer">
                         <img src="image/profile.png" alt="Adnan Denan's profile picture"
                             class="w-16 h-16 rounded-full mx-auto lg:w-20 lg:h-20">
                         <h3 class="text-sm font-bold text-center text-edumate-white mt-2 lg:text-base">Adnan Denan
@@ -204,7 +204,7 @@
                             JavaScript</div>
                     </div>
                     <div
-                        class="student-card flex-shrink-0 w-[150px] h-[160px] bg-edumate-black rounded-2xl p-4 flex flex-col justify-center items-center shadow-md lg:w-auto lg:h-auto lg:aspect-square hover:scale-105 transition-transform duration-200 cursor-pointer">
+                        class="student-card flex-shrink-0 w-[150px] h-[160px] bg-edumate-base rounded-2xl p-4 flex flex-col justify-center items-center shadow-md lg:w-auto lg:h-auto lg:aspect-square hover:scale-105 transition-transform duration-200 cursor-pointer">
                         <img src="image/profile.png" alt="Siti Rahayu's profile picture"
                             class="w-16 h-16 rounded-full mx-auto lg:w-20 lg:h-20">
                         <h3 class="text-sm font-bold text-center text-edumate-white mt-2 lg:text-base">Siti Rahayu
@@ -215,7 +215,7 @@
                             Matematika</div>
                     </div>
                     <div
-                        class="student-card flex-shrink-0 w-[150px] h-[160px] bg-edumate-black rounded-2xl p-4 flex flex-col justify-center items-center shadow-md lg:w-auto lg:h-auto lg:aspect-square hover:scale-105 transition-transform duration-200 cursor-pointer">
+                        class="student-card flex-shrink-0 w-[150px] h-[160px] bg-edumate-base rounded-2xl p-4 flex flex-col justify-center items-center shadow-md lg:w-auto lg:h-auto lg:aspect-square hover:scale-105 transition-transform duration-200 cursor-pointer">
                         <img src="image/profile.png" alt="Bayu Pramono's profile picture"
                             class="w-16 h-16 rounded-full mx-auto lg:w-20 lg:h-20">
                         <h3 class="text-sm font-bold text-center text-edumate-white mt-2 lg:text-base">Bayu Pramono
@@ -231,7 +231,7 @@
         </main>
 
         <div
-            class="bottom-navbar w-full h-[92px] bg-edumate-black p-2 flex justify-center items-center rounded-full mt-auto lg:hidden fixed bottom-0 left-0 right-0 z-50 shadow-lg">
+            class="bottom-navbar w-full h-[92px] bg-edumate-base p-2 flex justify-center items-center rounded-full mt-auto lg:hidden fixed bottom-0 left-0 right-0 z-50 shadow-lg">
             <div class="nav-icon flex justify-between gap-12 p-2">
                 <a href="/edumate/homepage" class="w-8 h-8">
                     <img src="image/home.png" alt="Home Icon" class="w-full h-full">
@@ -251,7 +251,7 @@
             </div>
         </div>
 
-        <div class="hidden lg:flex justify-center w-full bg-edumate-black py-4 mt-8 rounded-t-3xl shadow-lg">
+        <div class="hidden lg:flex justify-center w-full bg-edumate-base py-4 mt-8 rounded-t-3xl shadow-lg">
             <div class="flex space-x-16">
                 <a href="/edumate/homepage" class="flex flex-col items-center text-edumate-white font-bold">
                     <img src="image/home.png" alt="Home Icon" class="w-10 h-10 mb-1">

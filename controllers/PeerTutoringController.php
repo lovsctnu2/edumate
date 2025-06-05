@@ -1,65 +1,57 @@
 <?php
-require_once 'models/PeerTutoringRequest.php';
-require_once 'models/PeerTutoringOffer.php';
+require_once 'models/PermintaanMentor.php';
+require_once 'models/PermintaanMurid.php';
 require_once 'models/Recommendation.php';
 require_once 'models/User.php';
 
 class PeerTutoringController {
-
-    // Menampilkan halaman Peer Tutoring utama
     public function showPeerTutoringPage() {
-        $recommendations = Recommendation::getForUser(User::getCurrentUserId());
+        $recommendedMentors = Recommendation::getRecommendedMentors(User::getCurrentUserId());
+        $recommendedMurids = Recommendation::getRecommendedMurids(User::getCurrentUserId());
+
         include 'views/peerTutoring.php';
     }
 
-    // Menampilkan form untuk murid mencari mentor
     public function showMentorRequestForm() {
         include 'views/muridForm.php';
     }
 
-    // Menyimpan request mencari mentor
     public function storeMentorRequest() {
-        PeerTutoringRequest::create([
-            'materi'    => $_POST['materi'] ?? '',
-            'jenjang'   => $_POST['jenjang'] ?? '',
-            'target'    => $_POST['target'] ?? '',
-            'user_id'   => User::getCurrentUserId()
+        PermintaanMentor::create([
+            'id_pengguna_murid' => User::getCurrentUserId(),
+            'materi_diminta'    => $_POST['materi_diminta'] ?? '',
+            'jenjang_kelas_pilihan' => $_POST['jenjang_kelas_pilihan'] ?? '',
+            'target_belajar'    => $_POST['target_belajar'] ?? ''
         ]);
 
-        // Redirect menggunakan URL bersih
         header("Location: /edumate/peer-tutoring");
-        exit; // Pastikan eksekusi berhenti di sini
+        exit;
     }
 
-    // Menampilkan form untuk menawarkan diri menjadi mentor
-    public function showMentorOfferForm() {
+    public function showMuridRequestForm() {
         include 'views/mentorForm.php';
     }
 
-    // Tambahan method baru:
+    public function storeMuridRequest() {
+        PermintaanMurid::create([
+            'id_pengguna_mentor'    => User::getCurrentUserId(),
+            'materi_dicari'         => $_POST['materi_dicari'] ?? '',
+            'jenjang_kelas_dicari'  => $_POST['jenjang_kelas_dicari'] ?? '',
+            'kredibilitas_murid_dicari' => $_POST['kredibilitas_murid_dicari'] ?? ''
+        ]);
+
+        header("Location: /edumate/peer-tutoring");
+        exit;
+    }
+
     public function showMentorFormPage() {
-        include 'views/mentorForm.php';
+        $this->showMuridRequestForm();
     }
 
     public function showMuridFormPage() {
-        include 'views/muridForm.php';
+        $this->showMentorRequestForm();
     }
 
-    // Menyimpan data penawaran menjadi mentor
-    public function storeMentorOffer() {
-        PeerTutoringOffer::create([
-            'materi'        => $_POST['materi'] ?? '',
-            'jenjang'       => $_POST['jenjang'] ?? '',
-            'kredibilitas'  => $_POST['kredibilitas'] ?? '',
-            'user_id'       => User::getCurrentUserId()
-        ]);
-
-        // Redirect menggunakan URL bersih
-        header("Location: /edumate/peer-tutoring");
-        exit; // Pastikan eksekusi berhenti di sini
-    }
-
-    // Menampilkan hasil pencarian mentor/murid berdasarkan query
     public function search($query) {
         $results = [
             ['name' => 'Mentor A', 'subject' => 'Matematika'],
@@ -74,7 +66,6 @@ class PeerTutoringController {
         include 'views/searchResults.php';
     }
 
-    // Menampilkan notifikasi terkait respons dan tawaran
     public function showNotifications() {
         $notifications = [
             "Mentor A menerima permintaan Anda.",

@@ -18,9 +18,9 @@
                         poppins: ['Poppins', 'sans-serif'],
                     },
                     colors: {
-                        // Define custom colors for consistency
+                        'edumate-base': '#B3B3B3',
                         'edumate-black': '#1A1A1A',
-                        'edumate-white': '#F2F2F2',
+                        'edumate-white': '#FFFFFF',
                         'edumate-gray': '#D4D4D4',
                     },
                 },
@@ -33,7 +33,7 @@
 
     <div class="min-h-screen flex flex-col">
         <div
-            class="navbar bg-edumate-black w-full h-[180px] rounded-bl-3xl rounded-br-3xl px-4 md:px-10 pb-10 pt-[88px] text-xl flex justify-between items-center lg:h-[120px] lg:pt-5 lg:px-20">
+            class="navbar bg-edumate-base w-full h-[180px] rounded-bl-3xl rounded-br-3xl px-4 md:px-10 pb-10 pt-[88px] text-xl flex justify-between items-center lg:h-[120px] lg:pt-5 lg:px-20">
             <img src="image/logo.png" alt="EduMate Logo" class="w-[92px] h-[51px] lg:w-[120px] lg:h-[66px]" />
             <div class="profil flex items-center">
                 <div class="user text-edumate-white mr-2 text-xl font-bold leading-none lg:text-right lg:mr-4">
@@ -89,7 +89,7 @@
 
                 <div class="text-center mt-6">
                     <button type="submit"
-                        class="block bg-edumate-black text-edumate-white text-lg font-semibold px-8 py-3 rounded-xl shadow-lg w-fit mx-auto text-center hover:bg-edumate-gray hover:text-edumate-black transition-colors duration-200 lg:px-12 lg:py-4 lg:text-xl">
+                        class="block bg-edumate-base text-edumate-white text-lg font-semibold px-8 py-3 rounded-xl shadow-lg w-fit mx-auto text-center hover:bg-edumate-gray hover:text-edumate-black transition-colors duration-200 lg:px-12 lg:py-4 lg:text-xl">
                         Buat Grup
                     </button>
                 </div>
@@ -97,7 +97,7 @@
         </main>
 
         <div
-            class="bottom-navbar w-full h-[92px] bg-edumate-black p-2 flex justify-center items-center rounded-full mt-auto lg:hidden fixed bottom-0 left-0 right-0 z-50 shadow-lg">
+            class="bottom-navbar w-full h-[92px] bg-edumate-base p-2 flex justify-center items-center rounded-full mt-auto lg:hidden fixed bottom-0 left-0 right-0 z-50 shadow-lg">
             <div class="nav-icon flex justify-between gap-12 p-2">
                 <a href="/edumate/homepage" class="w-8 h-8">
                     <img src="image/home.png" alt="Home Icon" class="w-full h-full">
@@ -117,7 +117,7 @@
             </div>
         </div>
 
-        <div class="hidden lg:flex justify-center w-full bg-edumate-black py-4 mt-8 rounded-t-3xl shadow-lg">
+        <div class="hidden lg:flex justify-center w-full bg-edumate-base py-4 mt-8 rounded-t-3xl shadow-lg">
             <div class="flex space-x-16">
                 <a href="/edumate/homepage" class="flex flex-col items-center text-edumate-white font-bold">
                     <img src="image/home.png" alt="Home Icon" class="w-10 h-10 mb-1">

@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "1234"; // Ganti kalau ada password
-$dbname = "edumate_db";
+$password = "1234"; 
+$dbname = "edumate";
 $port = 3307;
 
 $conn = new mysqli($servername, $username, $password, $dbname, $port);

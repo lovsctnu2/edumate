@@ -37,8 +37,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         poppins: ['Poppins', 'sans-serif'],
                     },
                     colors: {
+                        'edumate-base': '#B3B3B3',
                         'edumate-black': '#1A1A1A',
-                        'edumate-white': '#F2F2F2',
+                        'edumate-white': '#FFFFFF',
                         'edumate-gray': '#D4D4D4',
                     },
                 },
@@ -51,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <div class="min-h-screen flex flex-col">
         <div
-            class="navbar bg-edumate-black w-full h-[180px] rounded-bl-3xl rounded-br-3xl px-4 md:px-10 pb-10 pt-[88px] text-xl flex justify-between items-center lg:h-[120px] lg:pt-5 lg:px-20">
+            class="navbar bg-edumate-base w-full h-[180px] rounded-bl-3xl rounded-br-3xl px-4 md:px-10 pb-10 pt-[88px] text-xl flex justify-between items-center lg:h-[120px] lg:pt-5 lg:px-20">
             <img src="image/logo.png" alt="Logo EduMate" class="w-[92px] h-[51px] lg:w-[120px] lg:h-[66px]" />
             <div class="profil flex items-center">
                 <div class="user text-edumate-white mr-2 text-xl font-bold leading-none lg:text-right lg:mr-4">
@@ -82,18 +83,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <div>
                     <label for="file_upload" class="block text-sm font-medium text-edumate-black mb-1">Pilih File</label>
                     <input type="file" id="file_upload" name="file"
-                        class="w-full border border-edumate-gray p-3 rounded-md text-sm lg:text-base file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-edumate-gray file:text-edumate-black hover:file:bg-edumate-black hover:file:text-edumate-white transition-colors duration-200 cursor-pointer bg-edumate-white">
+                        class="w-full border border-edumate-gray p-3 rounded-md text-sm lg:text-base file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-edumate-white file:text-edumate-black hover:file:bg-edumate-base hover:file:text-edumate-white transition-colors duration-200 cursor-pointer bg-edumate-white">
                     <p class="mt-1 text-xs text-edumate-gray">Ukuran maksimum file: 2MB (contoh).</p>
                 </div>
                 
                 <button type="submit"
-                    class="w-full bg-edumate-black text-edumate-white font-semibold py-3 rounded-md hover:bg-gray-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-edumate-black focus:ring-offset-2 lg:py-4 lg:text-lg">
+                    class="w-full bg-edumate-base text-edumate-white font-semibold py-3 rounded-md hover:bg-gray-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-edumate-black focus:ring-offset-2 lg:py-4 lg:text-lg">
                     Upload Materi
                 </button>
             </form>
         </main>
 
-        <div class="hidden lg:flex justify-center w-full bg-edumate-black py-4 mt-8 rounded-t-3xl">
+        <div class="hidden lg:flex justify-center w-full bg-edumate-base py-4 mt-8 rounded-t-3xl">
             <div class="flex space-x-16">
                 <a href="/edumate/homepage" class="flex flex-col items-center text-edumate-white font-bold">
                     <img src="image/home.png" alt="Home" class="w-10 h-10 mb-1">
@@ -118,7 +119,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
         </div>
 
-        <div class="bottom-navbar w-full h-[92px] bg-edumate-black p-2 flex justify-center items-center rounded-full mt-auto lg:hidden">
+        <div class="bottom-navbar w-full h-[92px] bg-edumate-base p-2 flex justify-center items-center rounded-full mt-auto lg:hidden">
             <div class="nav-icon flex justify-between gap-12 p-2">
                 <a href="/edumate/homepage" class="w-8 h-8">
                     <img src="image/home.png" alt="Home" class="w-full h-full">
